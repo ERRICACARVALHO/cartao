@@ -1,0 +1,24 @@
+{% extends "cartao/base.html" %}
+{% block conteudo %}
+<div class="row">
+    {% for validado in validados %}
+    <div class="col-md-2">
+        <div class="card ">
+            <div class = "card-body">
+
+                <div class = "card-head bg-success">{{validado.id_validar}}</div>
+                <div>{{validado.cartao_validar}}</div>
+                <div>{{validado.cpf_validar }}</div>
+                <div>{{validado.nome_validar }}</div>
+                <div>{{validado.codigo_validar }}</div>
+                <div>{{validado.data_validar }}</div>
+            </div>
+
+        </div>
+
+    </div>
+    {% endfor %}
+</div>
+
+
+{% endblock conteudo %}

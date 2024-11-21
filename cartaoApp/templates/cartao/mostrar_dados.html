@@ -1,0 +1,26 @@
+{% extends "cartao/base.html" %}
+{% block conteudo %}
+   <table class = "table">
+       <thead>
+       <td>id</td>
+       <td>cartao</td>
+       <td>cpf</td>
+       <td>nome</td>
+       <td>codigo validação</td>
+       <td>data de vencimento</td>
+       </thead>
+       <tbody>
+       {% for validado in validados %}
+       <tr>
+              <td>{{validado.id_validar}}</td>
+              <td>{{validado.cartao_validar}}</td>
+              <td>{{validado.cpf_validar }}</td>
+              <td>{{validado.nome_validar }}</td>
+              <td>{{validado.codigo_validar }}</td>
+              <td>{{validado.data_validar }}</td>
+
+       </tr>
+       {% endfor %}
+       </tbody>
+   </table>
+{% endblock conteudo %}
